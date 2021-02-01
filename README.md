@@ -12,3 +12,9 @@ Technologies:
 NPM packages to install:
 	
 	npm i face-api.js@0.22.2 canvas@2.6.1 @tensorflow/tfjs-node@1.7.0 --save
+
+
+
+Example Face Detection:
+
+![face detection flashman yellow](./README/faceDetection.jpg)
