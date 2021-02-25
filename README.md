@@ -24,7 +24,7 @@ Main project Forked: [face-api.js](https://github.com/justadudewhohacks/face-api
 
 
 
-## Suport typeScript
+## Support typeScript
 
 Step step for install [support typescript](https://itnext.io/production-ready-node-js-rest-apis-setup-using-typescript-postgresql-and-redis-a9525871407)
 Install package necessary
