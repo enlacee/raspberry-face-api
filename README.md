@@ -41,6 +41,8 @@ Create file config typescript: ̀̀̀̀̀̀̀̀̀̀̀̀`tsconfig.json`
 
 	npx tsc --init --moduleResolution node --resolveJsonModule --target es6 --noImplicitAny --sourceMap --lib dom,es2017 --outDir dist
 
+Run project:
 
+	npm run dev
 
 ![face detection flashman yellow](./README/faceDetection.jpg)

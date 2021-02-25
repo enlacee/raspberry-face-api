@@ -1,6 +1,6 @@
-Stream = require('node-rtsp-stream')
+let Stream = require('node-rtsp-stream')
 
-stream = new Stream({
+var stream = new Stream({
   name: 'name',
   streamUrl: 'rtsp://192.168.1.64:554/11',
   wsPort: 9999,
