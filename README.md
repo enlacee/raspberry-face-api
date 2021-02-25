@@ -31,13 +31,13 @@ Install package necessary
 
 	npm i typescript tsc-watch
 
-Add on ̀̀̀̀̀̀̀`package.json`
+Add on `package.json`
 
 	"scripts": {
 		"dev": "tsc-watch --onSuccess \"node ./dist/server.js\""
 	}
 
-Create file config typescript: ̀̀̀̀̀̀̀̀̀̀̀̀`tsconfig.json`
+Create file config typescript: `tsconfig.json`
 
 	npx tsc --init --moduleResolution node --resolveJsonModule --target es6 --noImplicitAny --sourceMap --lib dom,es2017 --outDir dist
 
