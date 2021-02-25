@@ -8,7 +8,7 @@ import { canvas, faceDetectionNet, faceDetectionOptions, saveFile } from './comm
 
 
 var baseDir = './out/faces';
-async function paintAndCutFaces(pathFileName) {
+async function paintAndCutFaces(pathFileName:string) {
 
     await faceDetectionNet.loadFromDisk('./weights')
 
@@ -27,7 +27,7 @@ async function paintAndCutFaces(pathFileName) {
         // const uu = dataUrl.substring('data:image/png;base64,'.length);
         // fs.writeFileSync(currentIndex+".png", uu, 'base64');
         const buffer = new Buffer(dataUrl.split(/,\s*/)[1],'base64');
-        pngToJpeg({quality: 100})(buffer).then(output => {
+        pngToJpeg({quality: 100})(buffer).then( (output:any) => {
             
             if (!fs.existsSync(baseDir)) {
                 fs.mkdirSync(baseDir)
@@ -41,18 +41,18 @@ async function paintAndCutFaces(pathFileName) {
 }
 
 const directoryPath = path.join(__dirname, basePathDirectory);
-fs.readdir( directoryPath, function(err, files){
+fs.readdir( directoryPath, function(err:any, files:any){
     // handing error
     if (err) throw err;
 
-    files.forEach(function(file){
+    files.forEach(function(file:string){
         // list whatever you want to do with this files
         let fileExt = path.extname(file);
         
         if (fileExt === '.jpg'){
             let pathFile = basePathDirectory + '/' + file;
             
-            fs.stat(pathFile, function(err, stats){
+            fs.stat(pathFile, function(err:any, stats:any){
                 if (err) throw err;
                 console.log(file);
                 // console.log(`stats: ${JSON.stringify(stats)}`);

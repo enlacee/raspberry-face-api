@@ -7,7 +7,7 @@ const FS = require('fs');
 const PNG_TO_JPG = require('png-to-jpeg');
 const IMAGE_PATH_OUT = './out/faces';
 
-async function paintAndCutFace(pathFileName) {
+async function paintAndCutFace(pathFileName:string) {
     await  faceDetectionNet.loadFromDisk('./weights'); // Load models
 
     var fileName = PATH.basename(pathFileName);
@@ -26,7 +26,7 @@ async function paintAndCutFace(pathFileName) {
         let buffer = new Buffer(dataUrl.split(/,\s*/)[1],'base64');
 
         // Save micro images
-        PNG_TO_JPG({quality: 100})(buffer).then(output => {
+        PNG_TO_JPG({quality: 100})(buffer).then( (output:any) => {
             if (!FS.existsSync(IMAGE_PATH_OUT)) {
                 FS.mkdirSync(IMAGE_PATH_OUT)
             } 
