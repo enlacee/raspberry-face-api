@@ -22,6 +22,25 @@ Main project Forked: [face-api.js](https://github.com/justadudewhohacks/face-api
 
 	ts-node faceDetection.ts
 
-### Example Face Detection:
+
+
+## Suport typeScript
+
+Step step for install [support typescript](https://itnext.io/production-ready-node-js-rest-apis-setup-using-typescript-postgresql-and-redis-a9525871407)
+Install package necessary
+
+	npm i typescript tsc-watch
+
+Add on ̀̀̀̀̀̀̀`package.json`
+
+	"scripts": {
+		"dev": "tsc-watch --onSuccess \"node ./dist/server.js\""
+	}
+
+Create file config typescript: ̀̀̀̀̀̀̀̀̀̀̀̀`tsconfig.json`
+
+	npx tsc --init --moduleResolution node --resolveJsonModule --target es6 --noImplicitAny --sourceMap --lib dom,es2017 --outDir dist
+
+
 
 ![face detection flashman yellow](./README/faceDetection.jpg)
