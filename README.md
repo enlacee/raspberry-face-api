@@ -3,7 +3,12 @@
 Main project Forked: [face-api.js](https://github.com/justadudewhohacks/face-api.js)
 
 ### Technologies used:
+ 
+ * [nvm install](https://github.com/nvm-sh/nvm)   without SUDO
 
+ 	`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`
+ 	`nvm install 10`
+ 
  * tensorFlow Node = 1.7.0
  * node = 10
  * typescript
